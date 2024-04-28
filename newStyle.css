@@ -450,7 +450,7 @@ a.promo-link:hover{
 
 }
 
-@media only screen and (max-width: 1100px){
+@media only screen and (max-width: 800px){
 
     
     #page-article{
@@ -467,6 +467,10 @@ a.promo-link:hover{
         display: none;
     }
 
+    #page-article .mattress-viewer p{
+        font-size: 0.8rem;
+        
+    }
 
 
 }
@@ -486,6 +490,11 @@ a.promo-link:hover{
 
     #page-article nav{
         display: none;
+    }
+
+    .mattress-viewer p{
+        font-size: 0.7rem;
+        
     }
     
 }
