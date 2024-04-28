@@ -1337,20 +1337,55 @@ are found in the "Mattress Buying Guide_files" folder -->
           <article id="page-article">
             <header>
               <h1>Mattress Buying Guide</h1>
+              <ul class="guide-tags">
+
+                <li><p>Last Updated: April 28, 2024</p></li>
+                <li><p>|&emsp; Read Time: <span>4min</span> &emsp;|</p></li>
+
+
+              </ul>
             </header>
 
-              <nav class="article-nav">
-                <ul>
-                  <li>
-                    <a href="s">aaa</a>
-                  </li>
+              <nav class="article-nav" >
+                
+                <ul id="article-nav">
+                  <li><h3>Page Content</h3></li>
+                  <li><a href="#ultimate-guide">The Ultimate Guide</a></li>
+                  <li><a href="#types-of-mattress">Types of Mattress</a></li>
+                  <li><a href="#firmness">Firmness</a></li>
+                  <li><a href="#sleeping-position">Sleeping Position</a></li>
+                  <li><a href="#mattress-sizes">Mattress Sizes</a></li>
+                  <li><a href="#how-to-set-up">How to Set Up Your Mattress</a></li>
+                  <li><a href="#">Back to Top</a></li>
                 </ul>
               </nav>
+
+          <script>
+            <!-- The sticky did not work through css, perhaps it conflicts with existing stylesheet? -->
+            
+            const nav = document.getElementById('article-nav');
+
+            const navOffsetTop = nav.offsetTop;
+
+            function toggleStickyNav() {
+              if (window.pageYOffset > navOffsetTop) {
+                nav.classList.add('sticky');
+                nav.style.top = window.pageYOffset - 150
+              } else {
+                nav.classList.remove('sticky');
+              }
+            }
+
+            window.addEventListener('scroll', toggleStickyNav);
+
+
+          </script>
+
            
 
             <main>
 
-                    <section>
+                    <section id="ultimate-guide">
                       <h2>The ultimate guide to choosing your mattress</h2>
 
                       <p>
@@ -1359,7 +1394,7 @@ are found in the "Mattress Buying Guide_files" folder -->
                       </p>
   
                       <p>
-                        Ergolux delivers comfort and body support with its range
+                        <a class="promo-link"  href="https://www.kogan.com/au/ergolux/shop/furniture/beds-mattresses-mattresses-40419/" target="_blank">Ergolux</a> delivers comfort and body support with its range
                         of ergonomic mattresses.
                       </p>
   
@@ -1371,22 +1406,36 @@ are found in the "Mattress Buying Guide_files" folder -->
                     </section>
                     <hr />
 
-                    <section>
+                    <section id="types-of-mattress">
                       
                       <h2>Types of Mattress</h2>
                       <div class="mattress-container">
                         <section>
-                          <h3>What is a Memory Foam mattress?</h3>
-                          <p>
-                            Memory foam constantly moves with you to evenly distribute
-                            body weight in the mattress.
-                          </p>
-      
-                          <p>
-                            The memory foam in the mattress helps take the pressure
-                            off joints to ensure every individual part of your body is
-                            cushioned, supported, and comfortable.
-                          </p>
+                          <div>
+                            <h3>Memory Foam mattress</h3>
+                            <p>
+                              Memory foam constantly moves with you to evenly distribute
+                              body weight in the mattress.
+                            </p>
+        
+                            <p>
+                              The memory foam in the mattress helps take the pressure
+                              off joints to ensure every individual part of your body is
+                              cushioned, supported, and comfortable.
+                            </p>
+                            <p>
+                              Motion-absorbing properties make memory foam mattresses
+                              ideal for reducing partner disturbance by reducing motion
+                              transfer to other areas of the mattress.
+                            </p>
+        
+                            <p>
+                              A memory foam mattress with the right firmness for you can
+                              help to reduce back pains and can deliver pressure relief.
+                            </p>
+
+                          </div>
+                         
       
                           <p>
                             <img
@@ -1397,23 +1446,17 @@ are found in the "Mattress Buying Guide_files" folder -->
                             />
                           </p>
       
-                          <p>
-                            Motion-absorbing properties make memory foam mattresses
-                            ideal for reducing partner disturbance by reducing motion
-                            transfer to other areas of the mattress.
-                          </p>
-      
-                          <p>
-                            A memory foam mattress with the right firmness for you can
-                            help to reduce back pains and can deliver pressure relief.
-                          </p>
+                          
                           
                         </section>
 
                         
 
                         <section>
-                          <h3>What is a Latex Foam mattress?</h3>
+                          <div>
+
+                          
+                          <h3>Latex Foam mattress</h3>
                           <p>
                             Latex mattresses offer firm support by moulding to the
                             shape of your body.
@@ -1424,16 +1467,6 @@ are found in the "Mattress Buying Guide_files" folder -->
                             cradle pressure points like your hips and shoulders while
                             encouraging proper spine alignment.
                           </p>
-      
-                          <p>
-                            <img
-                              alt="Close up photograph of a latex mattress"
-                              src="./Mattress Buying Guide_files/Latex_Layer.jpeg"
-                              title=""
-                              style=""
-                            />
-                          </p>
-      
                           <p>
                             The open-cell structure of latex also allows for greater
                             air circulation and breathability, helping to create a
@@ -1446,6 +1479,18 @@ are found in the "Mattress Buying Guide_files" folder -->
                             mattress.
                           </p>
 
+                          </div>
+                          <p>
+                            <img
+                              alt="Close up photograph of a latex mattress"
+                              src="./Mattress Buying Guide_files/Latex_Layer.jpeg"
+                              title=""
+                              style=""
+                            />
+                          </p>
+      
+                          
+
 
 
                         </section>
@@ -1453,7 +1498,19 @@ are found in the "Mattress Buying Guide_files" folder -->
                         
 
                         <section>
-                          <h3>What is a Pocket Spring mattress?</h3>
+                          <div>
+                            <h3>Pocket Spring mattress</h3>
+                            <p>
+                              The pocket spring system in the mattress incorporates
+                              individually wrapped coil springs surrounded by comfort
+                              layers. Independent mattress springs distribute weight
+                              throughout the mattress by adapting to different pressure
+                              zones. Pocket spring mattresses are surrounded by a
+                              comfort foam layer to add the benefit of contouring foam.
+                            </p>    
+
+                          </div>
+                          
                           <p>
                             <img
                               alt="Close up photo of a Pocket Spring mattress"
@@ -1463,26 +1520,28 @@ are found in the "Mattress Buying Guide_files" folder -->
                             />
                           </p>
 
-                          <p>
-                            The pocket spring system in the mattress incorporates
-                            individually wrapped coil springs surrounded by comfort
-                            layers. Independent mattress springs distribute weight
-                            throughout the mattress by adapting to different pressure
-                            zones. Pocket spring mattresses are surrounded by a
-                            comfort foam layer to add the benefit of contouring foam.
-                          </p>    
+                          
 
                         </section>
                     
                         
 
                         <section>
-                          <h3>What is a Bonnell Spring mattress?</h3>
-                          <p>
-                            The Bonnell spring coil system uses springs in the
-                            mattress that are hourglass shaped with an interconnected
-                            mesh of metal.
-                          </p>
+                          <div>
+                            <h3>Bonnell Spring</h3>
+                            <p>
+                              The Bonnell spring coil system uses springs in the
+                              mattress that are hourglass shaped with an interconnected
+                              mesh of metal.
+                            </p>
+                            <p>
+                              The wider hourglass spring shape provides durability and
+                              support by allowing weight to be evenly distributed across
+                              all zones of the mattress.
+                            </p>
+                          </div>
+                          
+                          
       
                           <p>
                             <img
@@ -1493,11 +1552,7 @@ are found in the "Mattress Buying Guide_files" folder -->
                             />
                           </p>
       
-                          <p>
-                            The wider hourglass spring shape provides durability and
-                            support by allowing weight to be evenly distributed across
-                            all zones of the mattress.
-                          </p>
+                          
 
 
                         </section>
@@ -1508,8 +1563,8 @@ are found in the "Mattress Buying Guide_files" folder -->
 
                     <hr />
 
-                    <section>
-                      <h2>Firmness</h2>
+                    <section id="firmness">
+                    <h2>Firmness</h2>
 
                     <p>
                       The right mattress firmness will depend on the individual.
@@ -1520,71 +1575,85 @@ are found in the "Mattress Buying Guide_files" folder -->
                     </p>
 
                     <p>
-                      Mattresses on Kogan.com come in the following firmness
+                      Mattresses on <a class="promo-link" href="https://www.kogan.com/au/shop/?q=Mattress" target="_blank">Kogan.com</a> come in the following firmness
                       options:
                     </p>
 
-                    <p><strong>Plush</strong></p>
+                    <div class="firm-container">
 
-                    <ul>
-                      <li>
-                        <p>Super soft &amp; flexible</p>
-                      </li>
-                      <li>
-                        <p>
-                          Disperses body weight, cradles the hips &amp;
-                          shoulders &amp; reduces stress on back
-                        </p>
-                      </li>
-                      <li>
-                        <p>Flexible surface moulds to your body’s contours</p>
-                      </li>
-                    </ul>
+                      <div>
+                        <p><strong>Plush</strong></p>
 
-                    <p><strong>Medium</strong></p>
+                        <ul>
+                          <li>
+                            <p>Super soft &amp; flexible</p>
+                          </li>
+                          <li>
+                            <p>
+                              Disperses body weight, cradles the hips &amp;
+                              shoulders &amp; reduces stress on back
+                            </p>
+                          </li>
+                          <li>
+                            <p>Flexible surface moulds to your body’s contours</p>
+                          </li>
+                        </ul>
+                      </div>
+                      
 
-                    <ul>
-                      <li>
-                        <p>Balance between soft flexibility &amp; firmness</p>
-                      </li>
-                      <li>
-                        <p>Aligns your hips &amp; shoulders</p>
-                      </li>
-                      <li>
-                        <p>
-                          Conforms to your body’s natural shape while retaining
-                          a level of firmness
-                        </p>
-                      </li>
-                    </ul>
+                      <div>
+                        <p><strong>Medium</strong></p>
 
-                    <p><strong>Firm</strong></p>
+                        <ul>
+                          <li>
+                            <p>Balance between soft flexibility &amp; firmness</p>
+                          </li>
+                          <li>
+                            <p>Aligns your hips &amp; shoulders</p>
+                          </li>
+                          <li>
+                            <p>
+                              Conforms to your body’s natural shape while retaining
+                              a level of firmness
+                            </p>
+                          </li>
+                        </ul>
 
-                    <ul>
-                      <li>
-                        <p>
-                          Rigid &amp; resistant top player for greater
-                          resistance
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Maintains a neutral alignment of spine, hips &amp;
-                          shoulders
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Keeps the body straight to promote a healthy posture
-                        </p>
-                      </li>
-                    </ul>
+                      </div>
+
+                      <div>
+                        <p><strong>Firm</strong></p>
+
+                        <ul>
+                          <li>
+                            <p>
+                              Rigid &amp; resistant top player for greater
+                              resistance
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Maintains a neutral alignment of spine, hips &amp;
+                              shoulders
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Keeps the body straight to promote a healthy posture
+                            </p>
+                          </li>
+                        </ul>
+
+                      </div>
+                  </div>
+
+                    
 
                     </section>
                     
                     <hr />
 
-                    <section>
+                    <section id="sleeping-position">
                       <h2>Sleeping position</h2>
 
                     <p>
@@ -1593,73 +1662,40 @@ are found in the "Mattress Buying Guide_files" folder -->
                       mattress that we recommend you choose.
                     </p>
 
-                    <p><strong>Side sleeper</strong></p>
 
-                    <ul>
-                      <li>
-                        <p>
-                          Best suited to&nbsp;<strong>soft to medium</strong
-                          >&nbsp;mattresses
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Ideally has a mattress that moulds to hips &amp;
-                          shoulders
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          A soft to medium mattress can provide relief &amp;
-                          comfort to side sleepers
-                        </p>
-                      </li>
-                    </ul>
-
-                    <p><strong>Back sleeper</strong></p>
-
-                    <ul>
-                      <li>
-                        <p>
-                          Will find the most comfort &amp; support
-                          with&nbsp;<strong>medium to firm</strong
-                          >&nbsp;mattresses
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          Suited to a mattress that distributes weight evenly
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          A medium to firm mattress can help alleviate back pain
-                          for back sleepers
-                        </p>
-                      </li>
-                    </ul>
-
-                    <p><strong>Stomach sleeper</strong></p>
-
-                    <ul>
-                      <li>
-                        <p>
-                          <strong>Medium-firm to firm</strong>&nbsp;mattresses
-                          are most suitable &amp; comfortable
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          The best fit is a mattress that elevates the pelvis
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          A medium-firm to firm mattress prevents uncomfortable
-                          extension of lower back
-                        </p>
-                      </li>
-                    </ul>
+                      <div class="sleeping-table" role="region" tabindex="0">
+                      <table>
+                          <thead>
+                              <tr>
+                                  <th>Sleeping Position</th>
+                                  <th>Ideal Trait</th>
+                                  <th>Ideal Firmness</th>
+                                  <th>Explanation</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td><strong>Side sleeper</strong></td>
+                                  <td>Suited to a mattress that moulds to hips &amp; shoulders</td>
+                                  <td>soft to medium</td>
+                                  <td>A soft to medium mattress can provide relief &amp; comfort to side sleepers</td>
+                              </tr>
+                              <tr>
+                                  <td><strong>Back sleeper</strong></td>
+                                  <td>Suited to a mattress that distributes weight evenly</td>
+                                  <td>medium to firm</td>
+                                  <td>A medium to firm mattress can help alleviate back pain for back sleepers</td>
+                              </tr>
+                              <tr>
+                                  <td><strong>Stomach sleeper</strong></td>
+                                  <td>The best fit is a mattress that elevates the pelvis</td>
+                                  <td>Medium-firm to firm</td>
+                                  <td>A medium-firm to firm mattress prevents uncomfortable extension of lower back</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                    
+                      </div>
 
                     </section>
 
@@ -1667,25 +1703,64 @@ are found in the "Mattress Buying Guide_files" folder -->
 
                     <hr />
 
-                    <section>
+                    <section id="mattress-sizes">
                       <h2>Mattress sizes</h2>
 
-                      <p><strong>Single</strong>: 92 x 188 cm</p>
+                      <div class="mattress-container mattress-viewer">
+                        <div class="mattress-size">
+                          <p id="s-mat"><strong>Single:</strong> 92 x 188 cm</p>
 
-                      <p><strong>King Single</strong>: 107 x 203 cm</p>
+                          <p id="ks-mat"><strong>King Single:</strong> 107 x 203 cm</p>
 
-                      <p><strong>Double</strong>: 138 x 188 cm</p>
+                          <p id="d-mat"><strong>Double:</strong> 138 x 188 cm</p>
 
-                      <p><strong>Queen</strong>: 153 x 203 cm</p>
+                          <p id="q-mat"><strong>Queen:</strong> 153 x 203 cm</p>
 
-                      <p><strong>King</strong>: 203 x 203 cm</p>
+                          <p id="k-mat"><strong>King:</strong> 203 x 203 cm</p>
+                        </div>
+                        
+                        <div class="mattress-individual-view">
+                          <div id="s-mat-v"></div>
+                          <div id="ks-mat-v"></div>
+                          <div id="d-mat-v"></div>
+                          <div id="q-mat-v"></div>
+                          <div id="k-mat-v"></div>
+                        </div>
+                      </div>
+
+                      <script>
+                        const individualText = document.querySelectorAll('.mattress-size p');
+                        const individualViews = document.querySelectorAll('.mattress-individual-view div');
+                      
+                        individualText.forEach(text => {
+                          text.addEventListener('mouseover', function() {
+                            individualText.forEach(p => p.classList.remove('active-view'));
+                            individualViews.forEach(div => div.classList.remove('active-view'));
+                            this.classList.add('active-view');
+                            const id = this.id + '-v';
+                            document.getElementById(id).classList.add('active-view');
+                          });
+                        });
+
+                        individualViews.forEach(view => {
+                          view.addEventListener('mouseover', function() {
+                            individualText.forEach(p => p.classList.remove('active-view'));
+                            individualViews.forEach(div => div.classList.remove('active-view'));
+                            this.classList.add('active-view');
+                            const id = this.id.slice(0,-2);
+                            document.getElementById(id).classList.add('active-view');
+                          });
+                        });
+
+                      </script>
+                      
 
                     </section>
 
                     
                     <hr />
 
-                    <section>
+                    <section id="how-to-set-up">
                       <h2>How to set up your mattress</h2>
 
                     <p>
@@ -1694,47 +1769,69 @@ are found in the "Mattress Buying Guide_files" folder -->
                       effectively:
                     </p>
 
-                    <p>
-                      <img
-                        alt="Mattress in Box"
-                        src="./Mattress Buying Guide_files/Step1.svg"
-                        style="height: 200px"
-                      />
-                    </p>
+                    <div class="step-container">
+                      <div class="individual-step">
+                        <h3><strong>Step 1</strong></h3>
+                        <p>
+                          <img
+                            alt="Mattress in Box"
+                            src="./Mattress Buying Guide_files/Step1.svg"
+                  
+                          />
+                        </p>
+                        <p>
+                          Lay the box onto a flat surface or bed frame and slowly
+                          pull the mattress out of the packaging.
+                        </p>
+                      </div>
+                      <div class="individual-step">
+    
+                        <h3><strong>Step 2</strong></h3>
 
-                    <p><strong>Step 1</strong></p>
+                        <p>
+                          <img
+                            alt="Cut the Mattress"
+                            src="./Mattress Buying Guide_files/Step2.svg"
+                
+                          />
+                        </p>
+    
+                        <p>
+                          Carefully cut the outer bag with scissors and roll the
+                          mattress out onto a flat surface or bed frame.
+                        </p>
 
-                    <p>
-                      Lay the box onto a flat surface or bed frame and slowly
-                      pull the mattress out of the packaging.
-                    </p>
 
-                    <p>
-                      <img
-                        alt="Cut the Mattress"
-                        src="./Mattress Buying Guide_files/Step2.svg"
-                        style="height: 200px"
-                      />
-                    </p>
 
-                    <p><strong>Step 2</strong></p>
+                        
+                      </div>
+                      <div class="individual-step">
+                        <h3><strong>Step 3</strong></h3>
 
-                    <p>
-                      Carefully cut the outer bag with scissors and roll the
-                      mattress out onto a flat surface or bed frame.
-                    </p>
+                        <p>
+                          <img
+                            alt="Allow Mattress to Expand"
+                            src="./Mattress Buying Guide_files/Step3.svg"
+                        
+                          />
+                        </p>
+    
+                        
+    
+                        <p>Allow the mattress to expand for 24 hours before use.</p>
 
-                    <p>
-                      <img
-                        alt="Allow Mattress to Expand"
-                        src="./Mattress Buying Guide_files/Step3.svg"
-                        style="height: 200px"
-                      />
-                    </p>
+                        
+                      </div>
+                      
+  
+                      
+  
+                      
 
-                    <p><strong>Step 3</strong></p>
 
-                    <p>Allow the mattress to expand for 24 hours before use.</p>
+
+                    </div>
+                    
 
 
                     </section>
