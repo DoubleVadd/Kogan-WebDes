@@ -3,7 +3,7 @@
 :root{
 
     scroll-behavior: smooth;
-
+    /* Colour Scheme for the website */
     --highlight-c: #E71333;
     --medium-c: #eae8e8;
     --medium-dark-c: #6b6b6b;
@@ -39,6 +39,9 @@
     transform: translateZ(0);
 }
 
+/* Main CSS for the article begins here */
+/* Grid layout for the whole article is outlined here */
+
 #page-article{
     overflow: clip;
     padding: 3rem;
@@ -50,12 +53,12 @@
 }
 
 
-
 #page-article > *{
     padding: 1rem;
     
 }
 
+/* Links to websites should be underlined and be highlighted when hovering */
 a.promo-link{
     text-decoration: underline;
 }
@@ -63,6 +66,8 @@ a.promo-link{
 a.promo-link:hover{
     color: var(--highlight-c);
 }
+
+/* General Styling for common elements for consistency */
 
 #page-article h1{
     font-size: 2.7rem;
@@ -124,7 +129,7 @@ a.promo-link:hover{
 
 }
 
-#page-article header ul li p span{
+#page-article header ul li p span:not(.mobile-hide){
     color: var(--highlight-c);
 
 }
@@ -142,6 +147,8 @@ a.promo-link:hover{
     grid-area: nav;
 
 }
+
+/* Sticky nav through css seems to conflict, it is done through JS implementation */
 
 #page-article nav ul{
     z-index: 9999;
@@ -185,6 +192,8 @@ a.promo-link:hover{
 
 }
 
+/* First Mattress difference section */
+
 .mattress-container{
     box-shadow: var(--white-shadow);
     padding: 2rem;
@@ -216,6 +225,8 @@ a.promo-link:hover{
     aspect-ratio: 1.3;
     object-fit: cover;
 }
+
+/* Mattress Firmness containers */
 
 .firm-container{
     text-align: center;
@@ -256,6 +267,8 @@ a.promo-link:hover{
     margin-bottom: var(--h3-mar);
 }
 
+/* Sleeping Position Containers */
+
 .sleeping-table {
     overflow: auto;
     width: 100%;
@@ -294,6 +307,8 @@ a.promo-link:hover{
 .sleeping-table strong {
     color: var(--highlight-c);
 }
+
+/* Mattress Size comparisons */
 
 .mattress-viewer{
     display: flex;
@@ -346,12 +361,15 @@ a.promo-link:hover{
     background-color: var(--highlight-c);
 }
 
+/* Mattress Comparison sites scaled for accuracy */
+
 .mattress-individual-view #s-mat-v{height: calc(188px * 0.7) ; width: calc(92px * 0.7); }
 .mattress-individual-view #ks-mat-v{height: calc(203px * 0.7) ; width: calc(107px * 0.7) ;}
 .mattress-individual-view #d-mat-v{height: calc(188px * 0.7) ; width: calc(138px * 0.7) ;}
 .mattress-individual-view #q-mat-v{height: calc(203px * 0.7) ; width: calc(153px * 0.7) ;}
 .mattress-individual-view #k-mat-v{height: calc(203px * 0.7) ; width: calc(203px * 0.7) ;}
 
+/* Comparison for Each Setup Steps */
 
 .step-container{
     display: flex;
@@ -386,6 +404,8 @@ a.promo-link:hover{
 .step-container .individual-step:not(:last-child){
     border-right: var(--border-grey);
 }
+
+/* Mobile and smaller screen views, hide side Nav */
 
 @media only screen and (max-width: 1100px){
 
@@ -461,6 +481,10 @@ a.promo-link:hover{
         grid-auto-columns: 1fr 15rem;
         grid-template-areas: 'header header' 'article article'; 
 
+    }
+
+    #page-article .mobile-hide{
+        display: none;
     }
 
     #page-article nav{
